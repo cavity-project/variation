@@ -8,6 +8,9 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Models\StringDifference.Facts.cs" />
+    <Compile Include="Models\StringDifferenceDictionary.Facts.cs" />
+    <Compile Include="Models\VariationDates.Facts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Properties\CodeAnalysis.dictionary" />
     <None Include="packages.config" />

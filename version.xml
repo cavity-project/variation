@@ -2,10 +2,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MajorVersion>16</MajorVersion>
-    <MinorVersion>04</MinorVersion>
-    <BuildVersion>20</BuildVersion>
-    <Revision>1043</Revision>
-    <FullVersion>16.04.20.1043</FullVersion>
+    <MinorVersion>05</MinorVersion>
+    <BuildVersion>15</BuildVersion>
+    <Revision>1125</Revision>
+    <FullVersion>16.05.15.1125</FullVersion>
     <RevisionSource>DateTime</RevisionSource>
   </PropertyGroup>
 </Project>

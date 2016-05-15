@@ -14,8 +14,8 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("16.04.0.0")]
-[assembly: AssemblyFileVersion("16.04.20.1043")]
-[assembly: AssemblyInformationalVersion("16.04.20.1043")]
+[assembly: AssemblyVersion("16.05.0.0")]
+[assembly: AssemblyFileVersion("16.05.15.1125")]
+[assembly: AssemblyInformationalVersion("16.05.15.1125")]
 
 
