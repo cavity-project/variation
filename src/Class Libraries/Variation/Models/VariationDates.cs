@@ -92,29 +92,6 @@
             return string.Concat(Addition, '|', Repetition, '|', Alteration, '|', Deletion, '|', Restoration).GetHashCode();
         }
 
-        private IEnumerable<Tuple<string, DateTime>> Dates()
-        {
-            yield return Date("addition", Addition);
-            yield return Date("repetition", Repetition);
-            yield return Date("alteration", Alteration);
-            yield return Date("deletion", Deletion);
-            yield return Date("restoration", Restoration);
-        }
-
-        private static Tuple<string, DateTime> Date(string key,
-                                                    string value)
-        {
-            if (null == value)
-            {
-                return new Tuple<string, DateTime>(key, DateTime.MinValue);
-            }
-
-            value = value.Trim();
-            return 0 == value.Length
-                       ? new Tuple<string, DateTime>(key, DateTime.MinValue)
-                       : new Tuple<string, DateTime>(key, XmlConvert.ToDateTime(value, XmlDateTimeSerializationMode.Utc));
-        }
-
         public string Variance()
         {
             return Dates().Where(tuple => DateTime.MinValue != tuple.Item2)
@@ -140,6 +117,29 @@
             info.AddValue("_alteration", Alteration);
             info.AddValue("_deletion", Deletion);
             info.AddValue("_restoration", Restoration);
+        }
+
+        private static Tuple<string, DateTime> Date(string key,
+                                                    string value)
+        {
+            if (null == value)
+            {
+                return new Tuple<string, DateTime>(key, DateTime.MinValue);
+            }
+
+            value = value.Trim();
+            return 0 == value.Length
+                       ? new Tuple<string, DateTime>(key, DateTime.MinValue)
+                       : new Tuple<string, DateTime>(key, XmlConvert.ToDateTime(value, XmlDateTimeSerializationMode.Utc));
+        }
+
+        private IEnumerable<Tuple<string, DateTime>> Dates()
+        {
+            yield return Date("addition", Addition);
+            yield return Date("repetition", Repetition);
+            yield return Date("alteration", Alteration);
+            yield return Date("deletion", Deletion);
+            yield return Date("restoration", Restoration);
         }
     }
 }
